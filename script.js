@@ -7,8 +7,8 @@
 // @author       cyqsimon
 // @license      MIT
 // @supportURL   https://github.com/cyqsimon/WebcamFriendlyLichess
-// @updateURL    TODO
-// @downloadURL  TODO
+// @updateURL    https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.js
+// @downloadURL  https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.js
 // @match        https://lichess.org/*
 // ==/UserScript==
 
