@@ -11,11 +11,11 @@ Currently this script works for games underway, analysis board, puzzles, and stu
 
 ### Before
 
-![Before](https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/screenshots/game-pre.png)
+![Before](https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/screenshots/game-pre.png)
 
 ### After
 
-![After](https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/screenshots/game-post.png)
+![After](https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/screenshots/game-post.png)
 
 ## 💽 Installation Guide
 
@@ -27,7 +27,7 @@ Please first install a userscript manager for your browser. Tampermonkey is reco
 
 Then go to Dashboard -> Utilities. Paste the following link in the URL textbox and import.
 
-https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.js
+https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/script.js
 
 ## 🧩 Compatibility
 
