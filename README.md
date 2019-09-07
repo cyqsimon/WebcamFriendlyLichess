@@ -25,13 +25,13 @@ Please first install a userscript manager for your browser. Tampermonkey is reco
 
 [Tampermonkey for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/)
 
-Then go to Tampermonkey -> Dashboard -> Utilities. Paste the following link in the URL textbox and import.
+Then go to Tampermonkey -> Dashboard -> Utilities. At the bottom find the URL section, paste the following link in the textbox and import.
 
 https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/script.js
 
 Confirm by clicking install.
 
-And you're all set! Simply go to Lichess and observe the effects.
+And you're all set! Simply refresh Lichess and observe the effects.
 
 ## 🧩 Compatibility
 
