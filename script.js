@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.4
+// @version      1.0.3.5
 // @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -74,7 +74,7 @@
         continueObserver.observe(puzzleTools, { childList: true });
 
         // Fix vote popup
-        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-column: 1 / 3; } ");
+        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-column: 1 / 3; text-align: left; } ");
     }
 })();
 
