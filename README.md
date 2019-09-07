@@ -1,7 +1,13 @@
 # Webcam Friendly Lichess
 ![TamperMonkey v4.8](https://img.shields.io/badge/tamperMonkey-v4.8-brightgreen.svg) ![Chrome x64 v76.0](https://img.shields.io/badge/chrome%20x64-v76.0-brightgreen.svg) [![Github Repo](https://img.shields.io/badge/Github%20Repo--lightgrey?style=social&logo=github)](https://github.com/cyqsimon/WebcamFriendlyLichess)
 
-A userscript to make Lichess webcam friendly for streamers.
+A userscript to make Lichess more webcam-friendly for streamers.
+
+## 🛒 Features
+
+This script moves page elements on the right-hand-side of the board upwards to make space for a webcam.
+
+Currently this script works for games in play and analysis board. If you want to see support for other pages (e.g. study, training) please raise an issue on Github to let me know. I will implement them if there is demand.
 
 ### Before
 
