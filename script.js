@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3
+// @version      1.0.3.1
 // @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -53,7 +53,7 @@
 
         // Move RHS panels
         var tools = puzzle.getElementsByClassName("puzzle__tools")[0];
-        var controls = puzzle.removeChild(analyse.getElementsByClassName("puzzle__controls")[0]);
+        var controls = puzzle.removeChild(puzzle.getElementsByClassName("puzzle__controls")[0]);
         tools.appendChild(controls);
     }
 })();
