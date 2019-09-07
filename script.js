@@ -35,11 +35,25 @@
         var analyse = document.getElementsByClassName("analyse")[0];
 
         // Restrict move panel height
-        addGlobalStyle(" .analyse__tools { height: 50% !important; }");
+        addGlobalStyle(" .analyse__tools { height: 55% !important; }");
 
         // Move RHS panels
         var tools = analyse.getElementsByClassName("analyse__tools")[0];
         var controls = analyse.removeChild(analyse.getElementsByClassName("analyse__controls")[0]);
+        tools.appendChild(controls);
+    }
+    
+    // Puzzle Page
+    if(document.getElementsByClassName("puzzle")[0] != null)
+    {
+        var puzzle = document.getElementsByTagName("main")[0];
+        
+        // Restrict move panel height
+        addGlobalStyle(" .puzzle__tools { height: 55% !important; }");
+
+        // Move RHS panels
+        var tools = puzzle.getElementsByClassName("puzzle__tools")[0];
+        var controls = puzzle.removeChild(analyse.getElementsByClassName("puzzle__controls")[0]);
         tools.appendChild(controls);
     }
 })();
