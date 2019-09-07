@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.3
+// @version      1.0.3.4
 // @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -57,8 +57,24 @@
         puzzleTools.appendChild(puzzleControls);
         addGlobalStyle(" .puzzle__controls { margin-top: 0px !important; } ");
 
-        // Compress oversized buttons
-        addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 1 11rem !important; } } ");
+        // Horizontally arrange buttons
+        addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 40 11rem !important; display: grid; grid-template-rows: min-content min-content; grid-template-columns: 5fr 3fr; } } ");
+
+        // Compact continue button
+        addGlobalStyle(" @media (orientation: landscape) { .puzzle__feedback.after .continue { display: grid; grid-template-rows: min-content min-content; justify-items: center; } } ");
+        var continueObserver = new MutationObserver(mutations => mutations.forEach(mutation =>
+        {
+            if(mutation.addedNodes.length != 0 && mutation.addedNodes[0].matches(".puzzle__feedback.after"))
+            {
+                var puzzleContinue = puzzleTools.getElementsByClassName("continue")[0];
+                var puzzleContinueText = Array.from(puzzleContinue.childNodes).filter(node => node.nodeType == Node.TEXT_NODE)[0];
+                puzzleContinueText.data = "Continue";
+            }
+        }));
+        continueObserver.observe(puzzleTools, { childList: true });
+
+        // Fix vote popup
+        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-column: 1 / 3; } ");
     }
 })();
 
