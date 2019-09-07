@@ -55,6 +55,11 @@
         var tools = puzzle.getElementsByClassName("puzzle__tools")[0];
         var controls = puzzle.removeChild(puzzle.getElementsByClassName("puzzle__controls")[0]);
         tools.appendChild(controls);
+        addGlobalStyle(" .puzzle__controls { margin-top: 0px !important; } ");
+        
+        //Compress oversized buttons
+        var feedback = puzzle.getElementsByClassName("puzzle__feedback")[0];
+        addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 1 11rem !important; } } ");
     }
 })();
 
