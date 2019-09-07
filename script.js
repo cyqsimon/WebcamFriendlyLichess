@@ -49,7 +49,7 @@
         spacerContainer.appendChild(controls);
 
         // Restrict move panel height
-        addGlobalStyle(".analyse__tools { height: 60% !important; }");
+        addGlobalStyle(".analyse__tools { height: 50% !important; }");
     }
 })();
 
