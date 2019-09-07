@@ -32,3 +32,7 @@ https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.j
 ## 🧩 Compatibility
 
 This script is developed and tested on Chrome x64 v76.0 running on Windows 10 Professional. Although not tested, it should work on any modern browser that supports user script injection.
+
+## 🗑 Uninstallation
+
+The script runs completely offline and stores no files locally. If you wish to uninstall, simply go to the dashboard of your userscript manager and remove.
