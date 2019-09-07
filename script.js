@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.2
+// @version      1.0.3.3
 // @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -38,27 +38,26 @@
         addGlobalStyle(" .analyse__tools { height: 55% !important; }");
 
         // Move RHS panels
-        var tools = analyse.getElementsByClassName("analyse__tools")[0];
-        var controls = analyse.removeChild(analyse.getElementsByClassName("analyse__controls")[0]);
-        tools.appendChild(controls);
+        var analyseTools = analyse.getElementsByClassName("analyse__tools")[0];
+        var analyseControls = analyse.removeChild(analyse.getElementsByClassName("analyse__controls")[0]);
+        analyseTools.appendChild(analyseControls);
     }
-    
+
     // Puzzle Page
     if(document.getElementsByClassName("puzzle")[0] != null)
     {
         var puzzle = document.getElementsByTagName("main")[0];
-        
+
         // Restrict move panel height
         addGlobalStyle(" .puzzle__tools { height: 55% !important; }");
 
         // Move RHS panels
-        var tools = puzzle.getElementsByClassName("puzzle__tools")[0];
-        var controls = puzzle.removeChild(puzzle.getElementsByClassName("puzzle__controls")[0]);
-        tools.appendChild(controls);
+        var puzzleTools = puzzle.getElementsByClassName("puzzle__tools")[0];
+        var puzzleControls = puzzle.removeChild(puzzle.getElementsByClassName("puzzle__controls")[0]);
+        puzzleTools.appendChild(puzzleControls);
         addGlobalStyle(" .puzzle__controls { margin-top: 0px !important; } ");
-        
-        //Compress oversized buttons
-        var feedback = puzzle.getElementsByClassName("puzzle__feedback")[0];
+
+        // Compress oversized buttons
         addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 1 11rem !important; } } ");
     }
 })();
