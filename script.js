@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.5
-// @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
+// @version      1.0.3.6
+// @icon64       https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
 // @license      MIT
