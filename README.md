@@ -7,7 +7,7 @@ A userscript to make Lichess more webcam-friendly for streamers.
 
 This script moves page elements on the right-hand-side of the board upwards to make space for a webcam.
 
-Currently this script works for games in play, analysis board, and puzzles. If you want to see support for other pages, please raise an issue on Github to let me know. I will implement them if there is demand.
+Currently this script works for games underway, analysis board, puzzles, and studies. If you want to see support for other pages, please raise an issue on Github to let me know. I will implement them if there is demand.
 
 ### Before
 
