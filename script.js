@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.7
-// @icon         https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/icon.ico
+// @version      1.0.3.8
+// @icon         https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
 // @license      MIT
 // @supportURL   https://github.com/cyqsimon/WebcamFriendlyLichess
-// @updateURL    https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.js
-// @downloadURL  https://raw.githubusercontent.com/cyqsimon/WebcamFriendlyLichess/master/script.js
+// @updateURL    https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/script.js
+// @downloadURL  https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/script.js
 // @match        https://lichess.org/*
 // ==/UserScript==
 
