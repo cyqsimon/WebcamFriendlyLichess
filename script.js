@@ -68,12 +68,18 @@ var RHSPanelHeight = "55%";
         // Prevent feedback panel grow and horizontally arrange buttons
         addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 40 0rem !important; display: grid; grid-template-rows: min-content min-content; grid-template-columns: 5fr 3fr; } } ");
 
+        // Set vote call grid location and alignment
+        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-row: 1 / 2; grid-column: 1 / 3; text-align: left; } ");
+
+        // Set success & vote grid location
+        addGlobalStyle(" .puzzle__feedback.after .half-top { grid-row: 2 / 3; grid-column: 1 / 2; } ");
+
         // Correctly space success and vote
         addGlobalStyle(" .puzzle__feedback.after .complete { flex: 6 0 !important; } ");
         addGlobalStyle(" .puzzle__feedback.after .vote { flex: 2 0; } ");
 
-        // Compact continue button
-        addGlobalStyle(" @media (orientation: landscape) { .puzzle__feedback.after .continue { display: grid; grid-template-rows: min-content min-content; justify-items: center; padding: 0px 5px !important; } } ");
+        // Set continue button grid location and compact
+        addGlobalStyle(" @media (orientation: landscape) { .puzzle__feedback.after .continue { grid-row: 2 / 3; grid-column: 2 / 3; display: grid; grid-template-rows: min-content min-content; justify-items: center; padding: 0px 5px !important; } } ");
         var continueObserver = new MutationObserver(mutations => mutations.forEach(mutation =>
         {
             if(mutation.addedNodes.length != 0 && mutation.addedNodes[0].matches(".puzzle__feedback.after"))
@@ -87,9 +93,6 @@ var RHSPanelHeight = "55%";
             }
         }));
         continueObserver.observe(puzzleTools, { childList: true });
-
-        // Fix vote call
-        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-row: 1 / 2; grid-column: 1 / 3; text-align: left; } ");
     }
 })();
 
