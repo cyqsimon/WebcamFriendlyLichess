@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.10
+// @version      1.0.3.11
 // @icon         https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -59,11 +59,18 @@ var RHSPanelHeight = "55%";
         puzzleTools.appendChild(puzzleControls);
         addGlobalStyle(" .puzzle__controls { margin-top: 0px !important; } ");
 
-        // Reduce padding
+        // Reduce feedback padding
         addGlobalStyle(" .puzzle__feedback:not(.after) { padding: 1em 1em !important; } ");
 
-        // Horizontally arrange buttons
+        // Center view solution button
+        addGlobalStyle(".puzzle__feedback .view_solution { margin: auto !important; } ");
+
+        // Prevent feedback panel grow and horizontally arrange buttons
         addGlobalStyle(" @media (min-height: 600px) { .puzzle__feedback { flex: 0 40 0rem !important; display: grid; grid-template-rows: min-content min-content; grid-template-columns: 5fr 3fr; } } ");
+
+        // Correctly space success and vote
+        addGlobalStyle(" .puzzle__feedback.after .complete { flex: 6 0 !important; } ");
+        addGlobalStyle(" .puzzle__feedback.after .vote { flex: 2 0; } ");
 
         // Compact continue button
         addGlobalStyle(" @media (orientation: landscape) { .puzzle__feedback.after .continue { display: grid; grid-template-rows: min-content min-content; justify-items: center; } } ");
@@ -72,14 +79,17 @@ var RHSPanelHeight = "55%";
             if(mutation.addedNodes.length != 0 && mutation.addedNodes[0].matches(".puzzle__feedback.after"))
             {
                 var puzzleContinue = puzzleTools.getElementsByClassName("continue")[0];
+
+                puzzleContinue.children[0].setAttribute("style", "margin-left: 10px;");
+
                 var puzzleContinueText = Array.from(puzzleContinue.childNodes).filter(node => node.nodeType == Node.TEXT_NODE)[0];
                 puzzleContinueText.data = "Continue";
             }
         }));
         continueObserver.observe(puzzleTools, { childList: true });
 
-        // Fix vote popup
-        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-column: 1 / 3; text-align: left; } ");
+        // Fix vote call
+        addGlobalStyle(" .puzzle__feedback.after .vote_call { grid-row: 1 / 2; grid-column: 1 / 3; text-align: left; } ");
     }
 })();
 
