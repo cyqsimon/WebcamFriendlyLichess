@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Webcam Friendly Lichess
 // @namespace    https://github.com/cyqsimon/WebcamFriendlyLichess
-// @version      1.0.3.8
+// @version      1.0.3.9
 // @icon         https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/icon.ico
 // @description  This is a simple script that moves the right-hand-side panel upwards to make space for your webcam.
 // @author       cyqsimon
@@ -11,6 +11,8 @@
 // @downloadURL  https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/script.js
 // @match        https://lichess.org/*
 // ==/UserScript==
+
+var RHSPanelHeight = "55%";
 
 (function() {
     "use strict";
@@ -35,7 +37,7 @@
         var analyse = document.getElementsByClassName("analyse")[0];
 
         // Restrict move panel height
-        addGlobalStyle(" .analyse__tools { height: 55% !important; }");
+        addGlobalStyle(` .analyse__tools { height: ${RHSPanelHeight} !important; } `);
 
         // Move RHS panels
         var analyseTools = analyse.getElementsByClassName("analyse__tools")[0];
@@ -49,7 +51,7 @@
         var puzzle = document.getElementsByTagName("main")[0];
 
         // Restrict move panel height
-        addGlobalStyle(" .puzzle__tools { height: 55% !important; }");
+        addGlobalStyle(` .puzzle__tools { height: ${RHSPanelHeight} !important; } `);
 
         // Move RHS panels
         var puzzleTools = puzzle.getElementsByClassName("puzzle__tools")[0];
