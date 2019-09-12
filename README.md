@@ -44,3 +44,5 @@ This script is developed and tested on Chrome x64 v76.0 running on Windows 10 Pr
 ## 🐞 Known Issues
 
 Please do not use this script if you are using a very narrow screen (width < 800px, e.g. phones & tablets in portrait). This script rearranges some page elements in HTML code, which doesn't play well with Lichess' portrait layout.
+
+Occasionally this script may be confused by Lichess embeds and mess them up. Unfortunately due to technical limitations a complete fix would be very difficult. Please disable the script in those rare cases.
