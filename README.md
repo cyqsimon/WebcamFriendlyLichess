@@ -1,3 +1,9 @@
+## This repository is no longer updated
+
+To be honest the code of this scipt is quite crudely wirtten. It was meant to be a temporary patch more than anything else. I can go back and refine the code, but given the lack of interest, my insufficient time, and honestly, my laziness, I'm not doing so. If you would like to see a better-written version of this script, please shoot me a private message to request it.
+
+Meanwhile this script is still functional (for now, until Lichess makes major changes to their site), feel free to download and use as you wish.
+
 # Webcam Friendly Lichess
 ![Tampermonkey v4.8](https://img.shields.io/badge/Tampermonkey-v4.8-brightgreen.svg) ![Chrome x64 v76.0](https://img.shields.io/badge/Chrome%20x64-v76.0-brightgreen.svg) [![Github Repo](https://img.shields.io/badge/Github%20Repo--lightgrey?style=social&logo=github)](https://github.com/cyqsimon/WebcamFriendlyLichess)
 
