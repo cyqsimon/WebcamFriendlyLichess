@@ -11,11 +11,11 @@ Currently this script works for games underway, analysis board, puzzles, and stu
 
 ### Before
 
-![Before](https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/screenshots/game-pre.png)
+![Before](/screenshots/game-pre.png)
 
 ### After
 
-![After](https://github.com/cyqsimon/WebcamFriendlyLichess/raw/master/screenshots/game-post.png)
+![After](/screenshots/game-post.png)
 
 ## 💽 Installation Guide
 
